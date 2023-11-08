@@ -1,7 +1,8 @@
 #!/bin/bash
 # I use this script to handle initial package installs for Ubuntu 22.04 LTS servers
+
 echo "alias update='sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && sudo snap refresh'" >> ~/.bashrc
-sudo timedatectl set-timezone America/New_York
+sudo timedatectl set-timezone America/Denver
 sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
 sudo apt remove docker docker-engine docker.io containerd runc -y
 sudo apt update
@@ -16,8 +17,7 @@ curl -sL https://deb.nodesource.com/setup_18.x | sudo bash -
 sudo apt install -y nodejs
 sudo npm install --global yarn
 sudo npm install -g npm
-sudo snap install powershell --classic
-sudo apt install -y apt-transport-https dotnet-sdk-7.0 aspnetcore-runtime-7.0
+sudo apt install -y apt-transport-https 
 sudo apt install -y python3 python3-pip
 pip install --upgrade pip
 sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y

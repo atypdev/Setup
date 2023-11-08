@@ -11,18 +11,15 @@ if (Test-Path -Path "C:\ProgramData\Automation\packages.csv") {
     # Update this if $packages if needed, key is package name from Chocolatey, value is the arguments if any.
     $packages = [ordered]@{
         "git" = ""
-        "nodejs-lts" = ""
         "powershell-core" = ""
         "firefox" = ""
         "vscode" = ""
         "yarn" = ""
         "winscp" = ""
         "powertoys" = ""
-        "microsoft-teams.install" = ""
-        "microsoftazurestorageexplorer" = ""
-        "powerbi" = ""
-        "sql-server-management-studio" = ""
-        "visualstudio2022enterprise" = "--allWorkloads --includeRecommended --includeOptional --passive --locale en-US"
+        "7zip" = ""
+        "putty" = ""
+        "python" = ""
     }
     $csv = """Package"",""Arguments""`n"
     foreach($package in $packages.Keys) {
